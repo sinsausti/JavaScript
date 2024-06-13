@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Programs</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            padding-top: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .section {
+            margin-bottom: 30px;
+        }
+        .completed {
+            text-decoration: line-through;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center">JavaScript Programs</h1>
+
+        <div class="section" id="number-guessing-game">
+            <h2>Number Guessing Game</h2>
+            <button class="btn btn-primary" onclick="startGuessingGame()">Start Game</button>
+            <div id="guessing-game-output" class="mt-3"></div>
+        </div>
+
+        <div class="section" id="scientific-calculator">
+            <h2>Scientific Calculator</h2>
+            <div class="form-group">
+                <label for="operation">Operation</label>
+                <select class="form-control" id="operation">
+                    <option value="add">Add</option>
+                    <option value="subtract">Subtract</option>
+                    <option value="multiply">Multiply</option>
+                    <option value="divide">Divide</option>
+                    <option value="pow">Power</option>
+                    <option value="sin">Sine</option>
+                    <option value="cos">Cosine</option>
+                    <option value="tan">Tangent</option>
+                    <option value="log">Logarithm</option>
+                    <option value="exp">Exponential</option>
+                </select>
+            </div>
+            <div id="calculator-inputs"></div>
+            <button class="btn btn-primary" onclick="performCalculation()">Calculate</button>
+            <div id="calculator-output" class="mt-3"></div>
+        </div>
+
+        <div class="section" id="todo-list">
+            <h2>To-Do List</h2>
+            <div class="input-group mb-3">
+                <input type="text" id="task-input" class="form-control" placeholder="Enter a new task">
+                <div class="input-group-append">
+                    <button class="btn btn-success" onclick="addTask()">Add Task</button>
+                </div>
+            </div>
+            <ul id="task-list" class="list-group"></ul>
+        </div>
+
+        <div class="section" id="password-generator">
+            <h2>Password Generator</h2>
+            <div class="form-group">
+                <label for="password-length">Length</label>
+                <input type="number" id="password-length" class="form-control" value="12">
+            </div>
+            <div class="form-check">
+                <input type="checkbox" id="include-uppercase" class="form-check-input">
+                <label class="form-check-label" for="include-uppercase"> Include Uppercase</label>
+            </div>
+            <div class="form-check">
+                <input type="checkbox" id="include-digits" class="form-check-input">
+                <label class="form-check-label" for="include-digits"> Include Digits</label>
+            </div>
+            <div class="form-check mb-3">
+                <input type="checkbox" id="include-symbols" class="form-check-input">
+                <label class="form-check-label" for="include-symbols"> Include Symbols</label>
+            </div>
+            <button class="btn btn-primary" onclick="generatePassword()">Generate Password</button>
+            <div id="password-output" class="mt-3"></div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
